@@ -43,6 +43,51 @@
 // console.log(cal);
 // console.log(bus);
 
-let arrayNumber = [10,33,44,66,77,88,22];
-console.log(arrayNumber.splice(2,4,100,200,300,400));
-console.log(arrayNumber);
+// let arrayNumber = [10,33,44,66,77,88,22];
+// console.log(arrayNumber.splice(2,4,100,200,300,400));
+// console.log(arrayNumber);
+
+// function compare(a, b) {
+
+//     if (a == b) {
+   
+//     return true;
+   
+//     } else {
+   
+//     return false;
+   
+//     }
+   
+//    }
+   
+//    const result = compare(15, "15");
+   
+//    console.log(result);
+
+
+function compare(a, b) {
+
+    if (a.toString() === b) {
+   
+    return true;
+   
+    } else {
+   
+    return false;
+   
+    }
+   
+   }
+   
+   const result = compare(25, 25);
+   
+   console.log(result);
+   console.log("123" + 123);
+
+   
+   let a="hi";
+
+   let b= "there";
+   
+   console.log(a+b)
