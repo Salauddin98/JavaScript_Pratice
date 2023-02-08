@@ -32,3 +32,19 @@ const arrayInput = [1, 3, 5, 6, 7, 8, 9];
 for (arrayNumber of arrayInput) {
     console.log(arrayNumber);
 }
+
+//cout=
+const totalCost = (products) => {
+    let sum = 0;
+    // for (let i = 0; i < products.length; i++) {
+    //   sum = sum + products[i].price;
+    // }
+    for (product of products){
+      sum = sum + product.price;
+    }
+    return sum;
+  
+  };
+  let products = [{ name: "salauddin", price: 500 }, { name: "Nokia", price: 600 }];
+  console.log(totalCost(products));
+  

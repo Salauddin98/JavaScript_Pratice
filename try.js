@@ -29,10 +29,10 @@
 // function lengthName(name1, name2) {
 //   if (name1.length > name2.length) {
 //       return name1.split(" ").reverse().join("");
-      
+
 //   }else{
 //       return name2.split(" ").reverse().join("");
-      
+
 //   }
 // }
 // console.log(lengthName("salauddin","mohammed"));
@@ -50,44 +50,82 @@
 // function compare(a, b) {
 
 //     if (a == b) {
-   
+
 //     return true;
-   
+
 //     } else {
-   
+
 //     return false;
-   
+
 //     }
-   
+
 //    }
-   
+
 //    const result = compare(15, "15");
-   
+
 //    console.log(result);
 
 
-function compare(a, b) {
+// function compare(a, b) {
 
-    if (a.toString() === b) {
-   
-    return true;
-   
-    } else {
-   
-    return false;
-   
-    }
-   
-   }
-   
-   const result = compare(25, 25);
-   
-   console.log(result);
-   console.log("123" + 123);
+//     if (a.toString() === b) {
 
-   
-   let a="hi";
+//     return true;
 
-   let b= "there";
-   
-   console.log(a+b)
+//     } else {
+
+//     return false;
+
+//     }
+
+//    }
+
+//    const result = compare(25, 25);
+
+//    console.log(result);
+//    console.log("123" + 123);
+
+
+//    let a="hi";
+
+//    let b= "there";
+
+//    console.log(a+b)
+
+
+// const reverseMaker = (word) => {
+//   //Write Your solution Here
+//   let reverseResult = word.split("").reverse().join("");
+//   return reverseResult;
+// };
+// console.log(reverseMaker("salauddin"));
+
+
+// const totalCost = (products) => {
+//   let sum = 0;
+//   // for (let i = 0; i < products.length; i++) {
+//   //   sum = sum + products[i].price;
+//   // }
+//   for (product of products){
+//     sum = sum + product.price;
+//   }
+//   return sum;
+
+// };
+// let products = [{ name: "salauddin", price: 500 }, { name: "Nokia", price: 600 }];
+// console.log(totalCost(products));
+
+
+
+function mindGame(checkNumberInput) {
+  if (typeof checkNumberInput != "number" || checkNumberInput < 0) {
+  return "Enter a valid input";
+  }
+  else {
+  const result = ((((checkNumberInput * 3) + 10) / 2) - 5);
+  return result
+  }
+  }
+  console.log(mindGame(0));
+
+
