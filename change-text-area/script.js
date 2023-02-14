@@ -61,7 +61,7 @@ document.getElementById('fontSize').addEventListener('click', function (event) {
 // Another part---------------------------------------------------|
 
 //change text color dynamically------------------>
-const colorTextArea = document.getElementById('textArea');
+const colorTextArea = storeTextArea('textArea');
 function changeTextArea(event) {
     colorTextArea.style.color = event.target.value;
 
