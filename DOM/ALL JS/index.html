@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Practice</title>
+</head>
+
+<body>
+    <h1 id="myName">My name is salauddin</h1>
+    <input type="text" id="eventTime">
+    <button id="clickMe" disabled>Delete</button>
+    <!-- 
+    ul#salauddin>li.kamal*3>lorem3 -->
+    <section>
+        <ul id="list-container">
+            <li class="kamal">Lorem, ipsum dolor.</li>
+            <li class="kamal">Porro, ipsam vel.</li>
+            <li class="kamal">Maiores, aliquam cum?</li>
+        </ul>
+        <button id="add-items">Add</button>
+
+    </section>
+
+    <script>
+        document.getElementById('eventTime').addEventListener('keydown',function(event){
+            console.log(event.target.value);
+
+        })
+        document.getElementById('eventTime').addEventListener('keyup',function(event){
+            console.log(event.target.value);
+
+        })
+
+
+        //Add some logic
+        document.getElementById('eventTime').addEventListener('keyup', function (event) {
+            const inputValue = event.target.value;
+            const findButton = document.getElementById('clickMe');
+
+            if (inputValue == 'delete' || inputValue == 'Delete' || inputValue == "DELETE") {
+                findButton.removeAttribute("disabled");
+
+            } else {
+                findButton.setAttribute('disabled', true);
+
+            }
+
+        })
+
+        //remove h1 ----------
+        stopPropagation()------use boubble logic
+        stopImmediatePropagation()----use bouble immediate logic
+        document.getElementById('clickMe').addEventListener('click', function () {
+            const removeName = document.getElementById('myName');
+            removeName.style.display = 'none';
+        })
+
+
+        //ul practice------->
+        const items = document.getElementsByClassName('kamal');
+        for (const item of items) {
+            item.addEventListener('click', function (event) {
+                // console.log(event.target);
+                // console.log(event.target.parentNode);
+                console.log(event.target.parentNode.removeChild(event.target));
+            })
+        }
+        document.getElementById('list-container').addEventListener('click',function(event){
+            event.target.parentNode.removeChild(event.target);
+            
+        })
+
+
+
+        document.getElementById('add-items').addEventListener('click', function () {
+            const listContainer = document.getElementById('list-container');
+            const li = document.createElement('li');
+            li.innerText = "Alauddin";
+            li.classList.add('kamal');
+            listContainer.appendChild(li);
+
+        })
+    </script>
+</body>
+
+</html>
