@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Money Master</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.50.1/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <header class="container py-6">
+        <h1 class="text-4xl font-bold text-center">Money Master</h1>
+    </header>
+    <main>
+        <section class="w-full h-full max-w-7xl mx-auto mb-10">
+            <div class="flex flex-col sm:flex-row gap-6 items-center justify-center">
+                <div>
+                    <img class="w-[500px] h-[610px]" src="m.png" alt="">
+                </div>
+                <div class="flex flex-col gap-2 bg-slate-200 p-10">
+                    <div>
+                        <h1 class="text-2xl font-bold text-center mb-2">Income</h1>
+                        <div class="flex items-center gap-2">
+                            <label for="income" class="text-1xl font-bold">Income:</label>
+                            <input type="text" id="totalIncome" class="input input-bordered input-primary w-full max-w-xs" />
+                        </div>
+                    </div>
+                    <div>
+                        <h1 class="text-2xl font-bold text-center mb-2">Expenses</h1>
+                        <div class="flex flex-col gap-3">
+                            <div class="flex items-center gap-2 ml-5">
+                                <label for="income" class="text-1xl font-bold">Food:</label>
+                                <input id="food" type="text" class="input input-bordered input-primary w-full max-w-xs" />
+                            </div>
+                            <div class="flex items-center gap-2 ml-5">
+                                <label for="income" class="text-1xl font-bold">Rent:</label>
+                                <input id="rent" type="text" class="input input-bordered input-primary w-full max-w-xs" />
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <label for="income" class="text-1xl font-bold">Clothes:</label>
+                                <input id="cloth" type="text" class="input input-bordered input-primary w-full max-w-xs" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <button id="calculateBtn" class="btn btn-primary text-center">Calculate</button>
+                    </div>
+                    <div class="text-center text-1xl font-bold">
+                        <h1>Total Expenses: <span id="totalExpenses">0</span></h1>
+                        <h1>Balance: <span id="balance">0</span></h1>
+                    </div>
+                    <div class="flex gap-2 items-center">
+                        <label for="income" class="text-1xl font-bold">Save:</label>
+                        <input id="saveBalanceInput" type="text" class="input input-bordered input-primary w-full max-w-xs" />
+                        <h1 class="text-1xl font-bold">%</h1>
+                        <button id="saveBtn" class="btn btn-secondary">Save</button>
+                    </div>
+                    <div class="text-1xl font-bold text-center">
+                        <h1>Saving Amount: <span id="savingAmountShow">0</span></h1>
+                        <h1>Remaining Balance: <span id="remainingBalance">0</span></h1>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+    <script src="utility.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
