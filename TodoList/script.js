@@ -19,12 +19,7 @@ document.getElementById('addItemsBtn').addEventListener('click', function () {
     `
     tableBody.appendChild(tr);
     //For delete and color change----------->
-    const elements = document.querySelectorAll('.deleteBtn');
-    for (const value of elements) {
-        value.addEventListener('click', function (event) {
-            event.target.parentNode.parentNode.style.display = 'none'
-        })
-    }
+    findTargetClass('deleteBtn','none')
 
     const elementsDoneBtn = document.getElementsByClassName('doneBtn');
     for (const values of elementsDoneBtn) {
@@ -35,5 +30,7 @@ document.getElementById('addItemsBtn').addEventListener('click', function () {
     }
 
 })
+
+
 
 
