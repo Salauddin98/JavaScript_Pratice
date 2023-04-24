@@ -1,13 +1,14 @@
 // DRY ---> Do Not Repeat Yourself
 document.getElementById('btn-deposit').addEventListener("click", function () {
   // console.log('click');
-  const newDepositAmount =parseInt(document.getElementById("deposit-field").value) ;
+  // const newDepositAmount =parseInt(document.getElementById("deposit-field").value) ;
+  const newDepositAmount = getInputFieldValueById('deposit-field') ;
   // console.log(newDepositAmount)
   /* 
     1. get previous deposit total by id
  
     */
-  const previousDepositTotal =parseInt(document.getElementById("deposit-total").innerText);
+  const previousDepositTotal = getTextElementValueById('deposit-total');
   // console.log(previousDepositTotal)
   // const tryThis = parseInt(previousDepositTotal)
   // console.log(previousBalanceTotal)
